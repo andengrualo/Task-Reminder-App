@@ -80,7 +80,7 @@
 /* Sidebar Styles */
 .sidebar {
   width: 250px;
-  background: #321B15;
+  background: #321b15;
   color: white;
   padding: 2rem 0;
   flex-shrink: 0;
@@ -131,9 +131,15 @@
 /* Main Wrapper */
 .main-wrapper {
   flex: 1;
-  overflow: hidden;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  margin-top: 0; /* Remove any top margin */
+  padding-top: 0; /* Remove any top padding */
+  min-height: calc(100vh - 70px); /* Adjust for header height if fixed */
+  width: 100vw;
+  height: calc(100vh - 70px);
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .full-height {
@@ -145,6 +151,11 @@
   flex: 1;
   overflow-y: auto;
   background: #ffffff; /* Changed from #f8f9fa to pure white */
+  margin: 0;
+  padding: 0;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
 }
 
 .full-screen {
@@ -153,11 +164,12 @@
 }
 
 .page-content {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  min-height: calc(100vh - 70px - 4rem);
+  flex: 1;
+  padding: 16px 16px 16px 16px; /* Minimal padding for compactness */
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
 }
 
 /* Empty State - Updated to match UI */
@@ -202,7 +214,7 @@
   position: absolute;
   top: 2rem;
   right: 2rem;
-  background: #321B15;
+  background: #321b15;
   color: white;
   border: none;
   border-radius: 8px;
@@ -257,7 +269,7 @@
 }
 
 .add-task-btn-header {
-  background: #321B15;
+  background: #321b15;
   color: white;
   border: none;
   border-radius: 8px;
@@ -331,7 +343,7 @@
   width: 18px;
   height: 18px;
   cursor: pointer;
-  accent-color: #321B15;
+  accent-color: #321b15;
   border-radius: 4px;
 }
 
@@ -450,7 +462,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #321B15;
+  background: #321b15;
   color: white;
   border-radius: 16px 16px 0 0;
 }
@@ -488,7 +500,7 @@
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: #321B15;
+  color: #321b15;
   font-size: 0.9rem;
 }
 
@@ -508,7 +520,7 @@
 .form-textarea:focus,
 .form-select:focus {
   outline: none;
-  border-color: #321B15;
+  border-color: #321b15;
   box-shadow: 0 0 0 3px rgba(74, 63, 53, 0.1);
 }
 
@@ -609,7 +621,7 @@
 }
 
 .btn-primary {
-  background: #321B15;
+  background: #321b15;
   color: white;
   box-shadow: 0 4px 15px rgba(74, 63, 53, 0.2);
 }
@@ -653,7 +665,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .notification-btn:focus,
 .profile-btn:focus,
 .save-btn:focus {
-  outline: 2px solid #321B15;
+  outline: 2px solid #321b15;
   outline-offset: 2px;
 }
 
